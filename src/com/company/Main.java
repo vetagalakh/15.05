@@ -10,24 +10,28 @@ public class Main {
 
         String s = null;
 
-        try
-        {
+        int[] numArr;
+        try {
             String strArr[] = str.split(" ");
-            int numArr[] = new int[strArr.length];
+            numArr = new int[strArr.length];
             for (int i = 0; i < strArr.length; i++) {
                 numArr[i] = Integer.parseInt(strArr[i]);
-                // System.out.println(numArr[i]);
+                Triangle ObjectName = new Triangle();
+                ObjectName.a.x = numArr[0];
+                ObjectName.a.y = numArr[1];
+                ObjectName.b.x = numArr[2];
+                ObjectName.b.y = numArr[3];
+                ObjectName.c.x = numArr[4];
+                ObjectName.c.y = numArr[5];
+                ObjectName.square();
             }
-        }
-        catch (NumberFormatException nfe)
-        {
+        } catch (NumberFormatException nfe) {
             System.out.println("NumberFormatException: " + nfe.getMessage());
         }
 
-        Triangle ObjectName = new Triangle();
+
 
     }
-
     public static void main(String[] args) throws SimpleException {
 
 
